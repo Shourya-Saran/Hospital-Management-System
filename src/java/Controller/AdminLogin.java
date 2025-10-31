@@ -36,7 +36,7 @@ public class AdminLogin extends HttpServlet {
             String passp = request.getParameter("your_pass");
             Connection con = DatabaseConnection.initializeDatabase();
 
-            String s = "select *from adminreg";
+            String s = "select * from adminreg";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(s);
             while (rs.next()) {
